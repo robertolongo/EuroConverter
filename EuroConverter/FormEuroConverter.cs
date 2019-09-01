@@ -25,7 +25,7 @@ namespace EuroConverter
                 serviceConverter = new ServiceConverter();
                 
 
-                serviceConverter.ReadExchange(comboBoxCurrency);
+                serviceConverter.ReadExchange(comboBoxCurrency, textBoxDate);
             }
             serviceConverter.ConvertFromEuro(serviceConverter.CurrencyToEuro(Convert.ToDouble(textBox1.Text), comboBoxCurrency.Text), dataGridViewResults);
         }
@@ -35,7 +35,7 @@ namespace EuroConverter
             if (serviceConverter == null)
             {
                 serviceConverter = new ServiceConverter();
-                serviceConverter.ReadExchange(comboBoxCurrency);
+                serviceConverter.ReadExchange(comboBoxCurrency, textBoxDate);
             }
         }
 
@@ -61,7 +61,7 @@ namespace EuroConverter
             {
                 serviceConverter = new ServiceConverter();
                 serviceConverter.InitializationLookup(comboBoxCurrency);
-                serviceConverter.ReadExchange(comboBoxCurrency);
+                serviceConverter.ReadExchange(comboBoxCurrency, textBoxDate);
 
                 labelError.Text = "";
             }

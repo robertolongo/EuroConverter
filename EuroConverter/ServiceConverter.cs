@@ -55,7 +55,7 @@ namespace EuroConverter
             currencyDesc.Add("ZAR", "South African rand");
         }
 
-        public void ReadExchange(ComboBox comboboxCurrency)
+        public void ReadExchange(ComboBox comboboxCurrency, TextBox textBoxDate)
         {
             xmlExchange = new XmlDocument();
             rates = new Dictionary<string, double>();
@@ -67,7 +67,8 @@ namespace EuroConverter
             rates.Add("EUR", 1);
 
             xmlExchange.Load("http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml");
-            foreach(XmlNode xmlNode in xmlExchange.DocumentElement.ChildNodes[2].ChildNodes[0].ChildNodes)
+            textBoxDate.Text = xmlExchange.DocumentElement.ChildNodes[2].ChildNodes[0].Attributes["time"].Value;
+            foreach (XmlNode xmlNode in xmlExchange.DocumentElement.ChildNodes[2].ChildNodes[0].ChildNodes)
             {
                 string tmpValue = xmlNode.Attributes["rate"].Value;
                 NumberStyles style = NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands;

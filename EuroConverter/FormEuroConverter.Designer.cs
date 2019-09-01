@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnConvert = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
@@ -39,6 +40,8 @@
             this.ColumnValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCurrency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCurrencyDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelTop.SuspendLayout();
             this.panelCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).BeginInit();
@@ -66,6 +69,7 @@
             // 
             // panelTop
             // 
+            this.panelTop.Controls.Add(this.textBoxDate);
             this.panelTop.Controls.Add(this.labelError);
             this.panelTop.Controls.Add(this.comboBoxCurrency);
             this.panelTop.Controls.Add(this.textBox1);
@@ -147,6 +151,18 @@
             this.ColumnCurrencyDescription.HeaderText = "Currency Description";
             this.ColumnCurrencyDescription.Name = "ColumnCurrencyDescription";
             // 
+            // textBoxDate
+            // 
+            this.textBoxDate.Location = new System.Drawing.Point(688, 15);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDate.TabIndex = 9;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // FormEuroConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +195,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCurrency;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCurrencyDescription;
+        private System.Windows.Forms.TextBox textBoxDate;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
