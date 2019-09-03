@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnConvert = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
             this.labelError = new System.Windows.Forms.Label();
             this.comboBoxCurrency = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.ColumnValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCurrency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCurrencyDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxDate = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelTop.SuspendLayout();
             this.panelCenter.SuspendLayout();
@@ -57,18 +57,9 @@
             this.btnConvert.UseVisualStyleBackColor = true;
             this.btnConvert.Click += new System.EventHandler(this.BtnConvert_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(687, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // panelTop
             // 
+            this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.textBoxDate);
             this.panelTop.Controls.Add(this.labelError);
             this.panelTop.Controls.Add(this.comboBoxCurrency);
@@ -78,6 +69,22 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(800, 55);
             this.panelTop.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(603, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Reference date:";
+            // 
+            // textBoxDate
+            // 
+            this.textBoxDate.Location = new System.Drawing.Point(688, 15);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDate.TabIndex = 9;
             // 
             // labelError
             // 
@@ -151,13 +158,6 @@
             this.ColumnCurrencyDescription.HeaderText = "Currency Description";
             this.ColumnCurrencyDescription.Name = "ColumnCurrencyDescription";
             // 
-            // textBoxDate
-            // 
-            this.textBoxDate.Location = new System.Drawing.Point(688, 15);
-            this.textBoxDate.Name = "textBoxDate";
-            this.textBoxDate.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDate.TabIndex = 9;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -170,7 +170,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelCenter);
             this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConvert);
             this.Name = "FormEuroConverter";
             this.Text = "EuroConverter";
@@ -185,7 +184,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnConvert;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.ComboBox comboBoxCurrency;
@@ -197,6 +195,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCurrencyDescription;
         private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

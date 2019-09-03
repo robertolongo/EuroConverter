@@ -70,31 +70,6 @@ namespace EuroConverter
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Value");
-            dt.Columns.Add("Currency");
-            dt.Columns.Add("Descr");
-
-            DataRow dr = dt.NewRow();
-            dr["Value"] = "abc";
-            dr["Currency"] = "5";
-            dr["Descr"] = "asdfsegzd";
-
-            dt.Rows.Add(dr);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int num = dataGridViewResults.Rows.Add();
-                dataGridViewResults.Rows[num].Cells[0].Value = row["C1"].ToString();
-                dataGridViewResults.Rows[num].Cells[1].Value = row["C2"].ToString();
-                dataGridViewResults.Rows[num].Cells[2].Value = row["C3"].ToString();
-            }
-
-
-        }
-
         private void DataGridViewResults_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
