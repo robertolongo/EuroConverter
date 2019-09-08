@@ -89,5 +89,25 @@ namespace EuroConverter
         {
             System.Diagnostics.Process.Start("https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html");
         }
+
+        private void PDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.ecb.europa.eu/stats/shared/pdf/eurofxref.pdf");
+        }
+
+        private void CSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.ecb.europa.eu/stats/eurofxref/eurofxref.zip");
+        }
+
+        private void XMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");
+        }
+
+        private void RSSFeedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.ecb.europa.eu/home/html/rss.en.html");
+        }
     }
 }

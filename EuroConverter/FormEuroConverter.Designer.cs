@@ -52,6 +52,10 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.rateSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rSSFeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop.SuspendLayout();
             this.panelCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).BeginInit();
@@ -186,8 +190,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reloadRatesToolStripMenuItem,
-            this.exportExchangeRatesToolStripMenuItem,
             this.toolStripSeparator1,
+            this.exportExchangeRatesToolStripMenuItem,
             this.rateSourceToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
@@ -201,6 +205,11 @@
             // 
             // exportExchangeRatesToolStripMenuItem
             // 
+            this.exportExchangeRatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pDFToolStripMenuItem,
+            this.cSVToolStripMenuItem,
+            this.xMLToolStripMenuItem,
+            this.rSSFeedToolStripMenuItem});
             this.exportExchangeRatesToolStripMenuItem.Name = "exportExchangeRatesToolStripMenuItem";
             this.exportExchangeRatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportExchangeRatesToolStripMenuItem.Text = "Export rates";
@@ -249,6 +258,34 @@
             this.rateSourceToolStripMenuItem.Text = "Rate source";
             this.rateSourceToolStripMenuItem.Click += new System.EventHandler(this.RateSourceToolStripMenuItem_Click);
             // 
+            // pDFToolStripMenuItem
+            // 
+            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pDFToolStripMenuItem.Text = "PDF";
+            this.pDFToolStripMenuItem.Click += new System.EventHandler(this.PDFToolStripMenuItem_Click);
+            // 
+            // cSVToolStripMenuItem
+            // 
+            this.cSVToolStripMenuItem.Name = "cSVToolStripMenuItem";
+            this.cSVToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cSVToolStripMenuItem.Text = "CSV (.zip)";
+            this.cSVToolStripMenuItem.Click += new System.EventHandler(this.CSVToolStripMenuItem_Click);
+            // 
+            // xMLToolStripMenuItem
+            // 
+            this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xMLToolStripMenuItem.Text = "XML";
+            this.xMLToolStripMenuItem.Click += new System.EventHandler(this.XMLToolStripMenuItem_Click);
+            // 
+            // rSSFeedToolStripMenuItem
+            // 
+            this.rSSFeedToolStripMenuItem.Name = "rSSFeedToolStripMenuItem";
+            this.rSSFeedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rSSFeedToolStripMenuItem.Text = "RSS feed";
+            this.rSSFeedToolStripMenuItem.Click += new System.EventHandler(this.RSSFeedToolStripMenuItem_Click);
+            // 
             // FormEuroConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +332,10 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem rateSourceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cSVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rSSFeedToolStripMenuItem;
     }
 }
 
