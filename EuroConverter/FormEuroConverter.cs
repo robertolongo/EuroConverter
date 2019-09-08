@@ -74,5 +74,20 @@ namespace EuroConverter
         {
 
         }
+
+        private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void ExportExchangeRatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RateSourceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html");
+        }
     }
 }
