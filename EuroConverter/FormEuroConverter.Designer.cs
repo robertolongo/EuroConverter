@@ -31,6 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.btnConvert = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadRatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportExchangeRatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rSSFeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rateSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.licenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxDate = new System.Windows.Forms.TextBox();
             this.labelError = new System.Windows.Forms.Label();
@@ -41,25 +54,12 @@
             this.ColumnValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCurrency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCurrencyDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reloadRatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportExchangeRatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.licenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.rateSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rSSFeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.panelCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConvert
@@ -85,6 +85,108 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(800, 59);
             this.panelTop.TabIndex = 8;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.infoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reloadRatesToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.exportExchangeRatesToolStripMenuItem,
+            this.rateSourceToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.fileToolStripMenuItem.Text = "Rates";
+            // 
+            // reloadRatesToolStripMenuItem
+            // 
+            this.reloadRatesToolStripMenuItem.Name = "reloadRatesToolStripMenuItem";
+            this.reloadRatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reloadRatesToolStripMenuItem.Text = "Reload rates";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // exportExchangeRatesToolStripMenuItem
+            // 
+            this.exportExchangeRatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pDFToolStripMenuItem,
+            this.cSVToolStripMenuItem,
+            this.xMLToolStripMenuItem,
+            this.rSSFeedToolStripMenuItem});
+            this.exportExchangeRatesToolStripMenuItem.Name = "exportExchangeRatesToolStripMenuItem";
+            this.exportExchangeRatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportExchangeRatesToolStripMenuItem.Text = "Export rates";
+            this.exportExchangeRatesToolStripMenuItem.Click += new System.EventHandler(this.ExportExchangeRatesToolStripMenuItem_Click);
+            // 
+            // pDFToolStripMenuItem
+            // 
+            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.pDFToolStripMenuItem.Text = "PDF";
+            this.pDFToolStripMenuItem.Click += new System.EventHandler(this.PDFToolStripMenuItem_Click);
+            // 
+            // cSVToolStripMenuItem
+            // 
+            this.cSVToolStripMenuItem.Name = "cSVToolStripMenuItem";
+            this.cSVToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cSVToolStripMenuItem.Text = "CSV (.zip)";
+            this.cSVToolStripMenuItem.Click += new System.EventHandler(this.CSVToolStripMenuItem_Click);
+            // 
+            // xMLToolStripMenuItem
+            // 
+            this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.xMLToolStripMenuItem.Text = "XML";
+            this.xMLToolStripMenuItem.Click += new System.EventHandler(this.XMLToolStripMenuItem_Click);
+            // 
+            // rSSFeedToolStripMenuItem
+            // 
+            this.rSSFeedToolStripMenuItem.Name = "rSSFeedToolStripMenuItem";
+            this.rSSFeedToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.rSSFeedToolStripMenuItem.Text = "RSS feed";
+            this.rSSFeedToolStripMenuItem.Click += new System.EventHandler(this.RSSFeedToolStripMenuItem_Click);
+            // 
+            // rateSourceToolStripMenuItem
+            // 
+            this.rateSourceToolStripMenuItem.Name = "rateSourceToolStripMenuItem";
+            this.rateSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rateSourceToolStripMenuItem.Text = "Rate source";
+            this.rateSourceToolStripMenuItem.Click += new System.EventHandler(this.RateSourceToolStripMenuItem_Click);
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.licenseToolStripMenuItem});
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Text = "Info";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // licenseToolStripMenuItem
+            // 
+            this.licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
+            this.licenseToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.licenseToolStripMenuItem.Text = "License";
             // 
             // label1
             // 
@@ -174,68 +276,6 @@
             this.ColumnCurrencyDescription.HeaderText = "Currency Description";
             this.ColumnCurrencyDescription.Name = "ColumnCurrencyDescription";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.infoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 8;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reloadRatesToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.exportExchangeRatesToolStripMenuItem,
-            this.rateSourceToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.fileToolStripMenuItem.Text = "Rates";
-            // 
-            // reloadRatesToolStripMenuItem
-            // 
-            this.reloadRatesToolStripMenuItem.Name = "reloadRatesToolStripMenuItem";
-            this.reloadRatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reloadRatesToolStripMenuItem.Text = "Reload rates";
-            // 
-            // exportExchangeRatesToolStripMenuItem
-            // 
-            this.exportExchangeRatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pDFToolStripMenuItem,
-            this.cSVToolStripMenuItem,
-            this.xMLToolStripMenuItem,
-            this.rSSFeedToolStripMenuItem});
-            this.exportExchangeRatesToolStripMenuItem.Name = "exportExchangeRatesToolStripMenuItem";
-            this.exportExchangeRatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exportExchangeRatesToolStripMenuItem.Text = "Export rates";
-            this.exportExchangeRatesToolStripMenuItem.Click += new System.EventHandler(this.ExportExchangeRatesToolStripMenuItem_Click);
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.licenseToolStripMenuItem});
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.infoToolStripMenuItem.Text = "Info";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // licenseToolStripMenuItem
-            // 
-            this.licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
-            this.licenseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.licenseToolStripMenuItem.Text = "License";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -245,46 +285,6 @@
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // rateSourceToolStripMenuItem
-            // 
-            this.rateSourceToolStripMenuItem.Name = "rateSourceToolStripMenuItem";
-            this.rateSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rateSourceToolStripMenuItem.Text = "Rate source";
-            this.rateSourceToolStripMenuItem.Click += new System.EventHandler(this.RateSourceToolStripMenuItem_Click);
-            // 
-            // pDFToolStripMenuItem
-            // 
-            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pDFToolStripMenuItem.Text = "PDF";
-            this.pDFToolStripMenuItem.Click += new System.EventHandler(this.PDFToolStripMenuItem_Click);
-            // 
-            // cSVToolStripMenuItem
-            // 
-            this.cSVToolStripMenuItem.Name = "cSVToolStripMenuItem";
-            this.cSVToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cSVToolStripMenuItem.Text = "CSV (.zip)";
-            this.cSVToolStripMenuItem.Click += new System.EventHandler(this.CSVToolStripMenuItem_Click);
-            // 
-            // xMLToolStripMenuItem
-            // 
-            this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xMLToolStripMenuItem.Text = "XML";
-            this.xMLToolStripMenuItem.Click += new System.EventHandler(this.XMLToolStripMenuItem_Click);
-            // 
-            // rSSFeedToolStripMenuItem
-            // 
-            this.rSSFeedToolStripMenuItem.Name = "rSSFeedToolStripMenuItem";
-            this.rSSFeedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rSSFeedToolStripMenuItem.Text = "RSS feed";
-            this.rSSFeedToolStripMenuItem.Click += new System.EventHandler(this.RSSFeedToolStripMenuItem_Click);
             // 
             // FormEuroConverter
             // 
@@ -300,10 +300,10 @@
             this.Load += new System.EventHandler(this.FormEuroConverter_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            this.panelCenter.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelCenter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
             this.ResumeLayout(false);
 
         }
